@@ -1,0 +1,29 @@
+{
+  "name": "cleanblog",
+  "version": "1.0.0",
+  "description": "clean blog app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozgekrby/CleanBlog.git"
+  },
+  "keywords": [
+    "clean",
+    "blog",
+    "app",
+    "node"
+  ],
+  "author": "Özge Karabay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozgekrby/CleanBlog/issues"
+  },
+  "homepage": "https://github.com/ozgekrby/CleanBlog#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
