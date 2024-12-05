@@ -4,7 +4,8 @@ const path=require("path")
 const ejs=require("ejs");
 const app=express();
 const methodOverride = require('method-override');
-mongoose.connect('mongodb://localhost/cleanblog-test-db');
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_URL);
 const Post = require('./models/Post');
 const postController=require("./controllers/postControllers");
 const { getAboutPage, getAddPostPage, getPostPage, getEditPage } = require("./controllers/pageControllers");
@@ -29,7 +30,7 @@ app.get("/post",getPostPage)
 app.get('/posts/edit/:id',getEditPage);
 
 
-const port=3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port,()=>{
     console.log(`Sunucu ${port} portunda çalışıyor.`)
